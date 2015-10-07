@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest.js"></script>
+</head>
+
+<body ng-app="starter">
+    <ion-pane ng-controller="LightsController as vm">
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">Ionic Blank Starter</h1>
+        </ion-header-bar>
+        <ion-content>
+        <hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+            <ion-toggle ng-model="vm.switch" ng-click="vm.uploadToDropbox()" toggle-class="toggle-calm">Switch</ion-toggle>
+            <pre>Hello world {{vm | json}}</pre>
+        </ion-content>
+        <ion-tabs class="tabs-positive tabs-icon-only">
+            <ion-tab title="Home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline">
+                <!-- Tab 1 content -->
+            </ion-tab>
+            <ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+                <!-- Tab 2 content -->
+            </ion-tab>
+            <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+                <!-- Tab 3 content -->
+            </ion-tab>
+        </ion-tabs>
+    </ion-pane>
+</body>
+
+</html>
